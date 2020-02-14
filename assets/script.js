@@ -37,7 +37,12 @@ $searchBtn.on("click", function(){
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-          console.log(response);
+          console.log(response.response.docs);
+
+          response.response.docs.forEach(function(i){
+              console.log(i);
+          } )
+//mdn forEach;
       })
 
     });
