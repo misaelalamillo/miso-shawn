@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,11 +13,11 @@
         <div class="container">
         <div class="form-group">
           <label for="searchinput">Search Term:</label>
-          <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="">
+          <input type="search" class="form-control" id="searchTerm" placeholder="">
         </div>
         <div class="form-group">
           <label for="Select">Number of Records to Retrieve:</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="resultsNum">
             <option>5</option>
             <option>10</option>
             
@@ -25,14 +25,14 @@
         </div>
         <div class="form-group">
           <label for="startyearinput">Start Year (Optional):</label>
-          <input type="start-year" class="form-control" id="exampleFormControlInput2">
+          <input type="start-year" class="form-control" id="beginDate">
         </input>
         </div>
         <div class="form-group">
           <label for="endyearinput">End Year (Optional):</label>
-          <input type="end-year" class="form-control" id="exampleFormControlInput3"></input>
+          <input type="end-year" class="form-control" id="endDate"></input>
           <br>
-          <button>Search</button><button>Clear Results</button>
+          <button id="searchBtn">Search</button><button id="clearResults">Clear Results</button>
         </div>
         </div>
         <div class="container">
@@ -42,6 +42,8 @@
            
         </div>
       </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>

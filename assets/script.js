@@ -8,6 +8,7 @@ const $beginDateField = $("#beginDate");
 const $endDateField = $("#endDate");
 const $numResults = $("#resultsNum");
 const $searchBtn = $("#searchBtn");
+const $clearBtn = $("#clearResults");
 
 let apiKey = "XUAxESPi3oMNFelZzovJPqr3wm2qfIMj";
 
@@ -39,10 +40,10 @@ $searchBtn.on("click", function(){
           console.log(response);
       })
 
-    })
+    });
 
 
-fixTheForm(field){
+function fixTheForm(field){
     alert("You need to make sure you enter a " + field);
 
 }
