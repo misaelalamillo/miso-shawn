@@ -9,6 +9,8 @@ const $endDateField = $("#endDate");
 const $numResults = $("#resultsNum");
 const $searchBtn = $("#searchBtn");
 const $clearBtn = $("#clearResults");
+const $articleArea = $("#articleDisplay");
+
 
 let apiKey = "XUAxESPi3oMNFelZzovJPqr3wm2qfIMj";
 
@@ -37,14 +39,20 @@ $searchBtn.on("click", function(){
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-          console.log(response.response.docs);
+          //console.log(response.response.docs);
 
           response.response.docs.forEach(function(i){
-              console.log(i);
+              let $articleDiv = $("<div>");
+              let $articleTitle = $("<h3>");
+              let $articleContent = $("<p>");
+              $articleTitle.text(i.headline.main);
+              console.log(i.headline.main);
+              $articleContent.text(i.abstract);
+              $articleDiv.append($articleTitle).append($articleContent);
+              console.log($articleDiv);
+              $articleArea.append($articleDiv);
           } )
-//mdn forEach;
       })
-
     });
 
 
