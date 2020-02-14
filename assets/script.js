@@ -14,6 +14,7 @@ let apiKey = "XUAxESPi3oMNFelZzovJPqr3wm2qfIMj";
 let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?"
 
 
+//pub_year = year published
 
 $searchBtn.on("click", function(){
     event.preventDefault();
@@ -23,11 +24,13 @@ $searchBtn.on("click", function(){
     }
     searchTerm = $searchField.val().trim();
     if ($numResults === ""){
-        numberOfRecords = 10;
+        numberOfRecords = 5;
     }
     else{
         numberOfRecords = parseInt($numResults.val());
     }
+    queryURL = queryURL + "q=" + searchTerm + "&api-key=" + apiKey;
+    console.log(queryURL);
 
     $.ajax({
         url: queryURL,
