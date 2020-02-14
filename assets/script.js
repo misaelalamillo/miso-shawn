@@ -45,6 +45,5 @@ $searchBtn.on("click", function(){
 
 function fixTheForm(field){
     alert("You need to make sure you enter a " + field);
-
 }
 
